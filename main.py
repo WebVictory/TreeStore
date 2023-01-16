@@ -64,6 +64,7 @@ class TreeStore:
 
 
 if __name__ == '__main__':
+    
     items = [
         {"id": 1, "parent": "root"},
         {"id": 2, "parent": 1, "type": "test"},
