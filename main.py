@@ -27,11 +27,12 @@ class TreeStore:
         children = list(item for item in self.items if item["parent"] == id)
         return children
 
-    def __get_parent__(self, item, all=[]):
+    def __get_parent__(self, item, all=None):
         """
         приватня рекурсивный метод для получения родительских элементов
         """
-        # добавляем в список полученый элемент из вызова функции
+        if all is None:
+            all = []
         all.append(item)
         # получем родительский id
         parent_id = item["parent"]
